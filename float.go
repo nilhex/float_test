@@ -21,6 +21,8 @@ func calc(op string, args []float64) float64 {
 		return args[0] / args[1]
 	case "sqrt":
 		return math.Sqrt(args[0])
+	case "log10":
+		return math.Log10(args[0])
 	}
 	return 0
 }

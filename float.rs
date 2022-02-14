@@ -8,6 +8,7 @@ fn calc(op: &str, args: Vec<f64>) -> f64 {
         "*" => args[0] * args[1],
         "/" => args[0] / args[1],
         "sqrt" => args[0].sqrt(),
+        "log10" => args[0].log10(),
         _ => 0f64,
     }
 }

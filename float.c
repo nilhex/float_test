@@ -20,6 +20,9 @@ double calc(char *op, double *args)
     if (strcmp(op, "sqrt") == 0) {
         return sqrt(args[0]);
     }
+    if (strcmp(op, "log10") == 0) {
+        return log10(args[0]);
+    }
     return 0;
 }
 
@@ -57,8 +60,9 @@ int main()
         line = NULL;
 
         double c = calc(op, args);
-
         fprintf(out, "%.100f\n", c);
+
+        free(args);
     }
 
     fclose(in);
